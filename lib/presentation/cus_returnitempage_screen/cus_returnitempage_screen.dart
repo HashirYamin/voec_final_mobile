@@ -1,0 +1,10 @@
+import 'controller/cus_returnitempage_controller.dart';import 'package:flutter/material.dart';import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;import 'package:maaz_s_application7/core/app_export.dart';import 'package:maaz_s_application7/presentation/customerreturnformpage_page/customerreturnformpage_page.dart';import 'package:maaz_s_application7/widgets/custom_bottom_bar.dart';class CusReturnitempageScreen extends GetWidget<CusReturnitempageController> {const CusReturnitempageScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(extendBody: true, extendBodyBehindAppBar: true, body: Container(width: mediaQueryData.size.width, height: mediaQueryData.size.height, padding: EdgeInsets.only(bottom: 34.v), decoration: BoxDecoration(image: DecorationImage(image: fs.Svg(ImageConstant.imgGroup625), fit: BoxFit.cover)), child: Navigator(key: Get.nestedKey(1), initialRoute: AppRoutes.customerreturnformpagePage, onGenerateRoute: (routeSetting) => GetPageRoute(page: () => getCurrentPage(routeSetting.name!), transition: Transition.noTransition))), bottomNavigationBar: Padding(padding: EdgeInsets.symmetric(horizontal: 19.h), child: _buildBottomBar()))); } 
+/// Section Widget
+Widget _buildBottomBar() { return CustomBottomBar(onChanged: (BottomBarEnum type) {Get.toNamed(getCurrentRoute(type), id: 1);}); } 
+///Handling route based on bottom click actions
+String getCurrentRoute(BottomBarEnum type) { switch (type) {case BottomBarEnum.Homepage25x25: return AppRoutes.customerreturnformpagePage; case BottomBarEnum.Messages25x25: return "/"; case BottomBarEnum.Shoppingcart25x25: return "/"; case BottomBarEnum.Codiconaccountblack9000125x25: return "/"; default: return "/";} } 
+///Handling page based on route
+Widget getCurrentPage(String currentRoute) { switch (currentRoute) {case AppRoutes.customerreturnformpagePage: return CustomerreturnformpagePage(); default: return DefaultWidget();} } 
+ }
