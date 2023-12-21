@@ -1,1 +1,2 @@
-
+The Elite Marketplace aims to create an exclusive online platform for elite customers and brands, facilitating personalized interactions, seamless shopping experiences, and community engagement. The project scope includes extensive functionalities for both users and administrators.
+The voice of elite customers project aims to establish a sophisticated and exclusive online platform that caters to elite customers and premium brands. The platform will serve as a hub for personalized interactions, seamless shopping experiences, and community engagement, fostering a sense of exclusivity and luxury.
